@@ -1,4 +1,4 @@
-#sums uf the fibonacci numbers
+#sums of the fibonacci numbers
 sum=0
 
 space=input('enter a positive integer to store the number of spaces in an array')
