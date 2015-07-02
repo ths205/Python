@@ -1,4 +1,4 @@
-#This progran purpose is to normalise the spaces in the row with the headline bio
+#This program purpose is to normalise the spaces in the row with the headline bio
 
 
 import csv
