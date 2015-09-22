@@ -9,7 +9,7 @@ M=[-1,3,-4,5,1,-6,2,1]
 
 def solution(A):
     for i in range(0,len(A)):
-        if i==0 or i==len(A)-1:
+        if i==len(A)-1:
             #if A[1]+A[2]+A[3]+A[4]+A[5]+A[6]+A[7]:
              if sum(A[:i])==0:
                 print i
@@ -18,10 +18,10 @@ def solution(A):
              if sum(A[:i])==sum(A[i+1:]):
                 print i
 
-        #elif  i==len(A)-1:
+        elif  i==0:
 
-             #if sum(A[:i])==0:
-                #print i-1
+             if sum(A[i+1:])==0:
+                print i
 
         else:
                 print -1
