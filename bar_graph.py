@@ -36,7 +36,7 @@ x_1=0
 y_1=0
 z=0
 
-for line in open("resumes/programmer resume.doc"):
+for line in open("programmer resume.doc"):
 
 	for li in line:
 
