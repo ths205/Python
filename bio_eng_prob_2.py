@@ -1,4 +1,4 @@
-#Translates a protein sequence back into DNA
+#Translates a protein sequence back into DNA sequence
 
 from Bio.Alphabet import IUPAC
 
