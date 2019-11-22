@@ -1,0 +1,82 @@
+This program is to get the Weather data from the Chicago, New York, and Los Angelas csv files and
+calculate mean, max, min and standard deviation using version Python 2.7. The user would have to
+put in losangelas, newyork, honolulu or chicago at the command line in order to get the data of a specific csv file.
+Problem 1.1
+"""
+
+
+import csv
+"""Helps the program get an argument from the user in the command line"""
+import sys
+
+
+
+"""Gets the second argument from the input that the user has put in in the command line"""
+y = sys.argv[1]
+
+def average_temp(x):
+
+    """This method returns the average of the weather temperature data."""
+
+    return sum(x)/float(len(x))
+
+def max_temp(x):
+
+    """Returns the maximum temperature from the MeanTemperatureF"""
+
+    return max(x)
+
+def min_temp(x):
+
+    """Returns the minimum temperature from the MeanTemperatureF"""
+
+    return min(x)
+    
+def standard_dev(x):
+
+    """Returns the standard deviation of the MeanTemperatureF."""
+
+    """sum var is to get the sum of the square difference
+    between the data point and mean to calculate variance"""
+
+    sum_var = 0
+
+    for i in range( 0, len(x) ):
+
+        sum_var += ( x[i] - average_temp(x) ) ** 2
+
+    variance = sum_var / float(len(x))
+
+    return variance ** ( 0.5 )
+
+"""The try error checks if the file exists based on the argument
+   the user puts in from the command line."""
+   
+try:
+
+    data_directory = 'weather_files/weather_'+y+'.csv'
+
+    with open(data_directory) as csvfile:
+
+        read_rows = csv.DictReader(csvfile)
+
+        mean_temp_f = []
+
+        for row in read_rows:
+
+            #print(row)
+            mean_temp_f.append( int( row['Mean TemperatureF'] ) )
+
+        print 'Average temp : ' + str( average_temp( mean_temp_f ) )
+
+        print 'Max temp: ' + str( max_temp( mean_temp_f ) )
+
+        print 'Min temp: ' + str( min_temp( mean_temp_f ) )
+
+        print 'Standard_deviation: ' + str( standard_dev( mean_temp_f ) )
+
+except IOError:
+
+    print 'The File is not found'
+    exit()
+   
