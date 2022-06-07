@@ -1,5 +1,5 @@
 
-#This program is to find the gcd using the Euclidean Algorithm and recursion
+#This program is to find the gcd(Greatest Common Denominator) using the Euclidean Algorithm and recursion
 
 def gcd(x,y):
 
