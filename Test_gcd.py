@@ -1,7 +1,7 @@
 
 
 #Writing testcases for the file gcd.py
-#Please run through the command pytest test_gcd.py
+
 
 import unittest
 
@@ -90,3 +90,7 @@ class GCD_Test(unittest.TestCase):
        y = 60
 
        self.assertEqual(12,gcd.gcd(x,y))
+         
+
+if __name__== '__main__':
+       unittest.main()         
