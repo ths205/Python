@@ -35,3 +35,6 @@ class Num_to_Pow(unittest.TestCase):
        n=-1
        x=2
        self.assertEqual(0.5,cal_num_to_pow_n.x_to_pow_n(x,n))
+         
+if __name__== '__main__':
+       unittest.main()         
