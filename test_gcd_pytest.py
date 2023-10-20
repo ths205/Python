@@ -1,4 +1,5 @@
 #Import gcd to write  tests with pytest
+#Run the file by typing "pytest test_gcd_pytest.py"
 import pytest
 
 import gcd
