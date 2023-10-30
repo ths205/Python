@@ -1,5 +1,5 @@
 #Using Pytest to test to make sure sub_factorial.py file  works correctly
-#Run the file by typing "pytest test_sub_factorial_pytest.py"
+#Run the file by typing "pytest -s test_sub_factorial_pytest.py"
          
 import pytest
          
