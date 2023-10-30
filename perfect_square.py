@@ -10,6 +10,8 @@ def perfect_square(x):
 
      if x < 0:
         raise ValueError('Please enter a number greater than 0')
+     if x==0:
+        return "It is a perfect square"  
 
      for i in range(1, x+1):
 
