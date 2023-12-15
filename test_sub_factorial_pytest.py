@@ -41,6 +41,6 @@ def test_produces_correct_output_if_x_is_two():
          assert sub_factorial.factorial_sub(x)==1
 
 #Tests for the case for when the  input  is four
-def test_produces_correct_output_if_x_is_two():
+def test_produces_correct_output_if_x_is_four():
          x= 4
          assert sub_factorial.factorial_sub(x) == 9
