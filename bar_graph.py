@@ -118,8 +118,8 @@ for line in open("programmer resume.doc"):
 		elif li=='z':
 		    z=z+1
 
-print a
-print b
+print(a)
+print(b)
 
 y_axis=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x_1,y_1,z]
 
