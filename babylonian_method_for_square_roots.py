@@ -16,7 +16,7 @@ def babylonian_find_square_root(x_0,s, decimal_places):
 
     x_new = float((x_0 +( s / x_0 ) )/2)
 
-    if x_0 - x_new  < (pow(10,-decimal_places)) :
+    if abs(x_0 - x_new)  < (pow(10,-decimal_places)) :
        return x_new
 
     return babylonian_find_square_root(x_new,s,decimal_places)
