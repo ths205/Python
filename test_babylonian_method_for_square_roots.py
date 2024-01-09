@@ -48,6 +48,28 @@ class Babylonian_Method_Test(unittest.TestCase):
         d=-5
         
         self.assertRaises(ValueError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)
+
+        
+    #Test to make sure user gets invalid data if a string is given as input for square root of a number that cannot be converted to a float
+    def test_babylonian_input_root_is_string(self):
+        x_0 = 3 
+        root="invalid_data"
+        d = 4
+        self.assertRaises(TypeError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)
+        
+   #Test to make sure user gets invalid data if a string is given as input for square root of a number that cannot be converted to a float
+    def test_babylonian_initial_guess_is_string(self):
+        x_0 = "invalid data"
+        root= 9
+        d = 4  
+        self.assertRaises(TypeError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)
+        
+    #Test to make sure user gets invalid data if a string is given as input for square root of a number that cannot be converted to a float
+    def test_babylonian_number_of_decimals_is_string(self):
+        x_0 = 3
+        root= 4
+        d = "invalid data"
+        self.assertRaises(TypeError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)
     
     #Tests to make sure the program produces the almost correct result for the square root of 50965321
     def test_babylonian_find_square_root(self):
