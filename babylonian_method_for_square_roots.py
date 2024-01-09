@@ -8,6 +8,10 @@ def babylonian_find_square_root(x_0,s, decimal_places):
 #Checks to make sure the initial guess is not a zero
     if x_0 ==0:
        raise ZeroDivisionError('You entered a zero as your initial guess please enter a positive number')
+        
+#Checks that the user does not enter strings or characters as data
+if type(x_0)==str or type(x_0)==chr or type(s)==str or type(s)==chr or type(decimal_places)==str or type(decimal_places)==chr:
+       raise TypeError('You entered either string or char as data for initial guess, root or decimal places please enter numbers')    
 
 #Checks to make sure the input is not negative
     if x_0 < 0 or s< 0 or decimal_places < 0:
