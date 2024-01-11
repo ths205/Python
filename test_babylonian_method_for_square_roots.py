@@ -70,6 +70,27 @@ class Babylonian_Method_Test(unittest.TestCase):
         root= 4
         d = "invalid data"
         self.assertRaises(TypeError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)
+        
+    #Tests to make sure user raises a TypeError if a char is given as input for an initial guess instead of a positive number
+    def test_babylonian_initial_guess_is_chr(self):
+        x_0 = 'i'
+        root= 9
+        d = 4
+        self.assertRaises(TypeError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)
+    
+    #Tests to make sure a TypeError is raised if character that is not a positive number raises a TypeError
+    def test_babylonian_number_of_decimals_is_chr(self):
+        x_0 = 3
+        root= 4
+        d = 'i'
+        self.assertRaises(TypeError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)
+    
+    #Test to make sure user raises a TypeError if a char is given as input for square root of a number that cannot be converted to a float
+    def test_babylonian_input_root_is_chr(self):
+        x_0 = 3
+        root= 'i'
+        d = 4
+        self.assertRaises(TypeError,babylonian_method_for_square_roots.babylonian_find_square_root,x_0,root,d)    
     
     #Tests to make sure the program produces the almost correct result for the square root of 50965321
     def test_babylonian_find_square_root(self):
