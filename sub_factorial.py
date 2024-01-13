@@ -18,8 +18,15 @@ def factorial_sub(n):
 
     return n * factorial_sub(n-1) + pow(-1,n)
 
+try:
+    
+    #print(factorial_sub(6))
+    #print(factorial_sub(4))
+    y=int(input('Please enter a positive integer'))
+    print(factorial_sub(y))
 
-#print(factorial_sub(6))
-#print(factorial_sub(4))
-y=int(input('Please enter a positive integer'))
-print(factorial_sub(y))
+except ValueError:
+
+    print("You did not enter valid data that can be converted to an integer")
+    exit()
+
