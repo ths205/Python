@@ -26,9 +26,15 @@ def perfect_square(x):
 
 
 #print(perfect_square(100))
+#The try except will catch invalid data that cannot be coverted to an int
+try:
+     number =  int(input("Please Enter a Postive number"))
 
-number =  int(input("Please Enter a Postive number"))
 
 
+     print(perfect_square(number))
 
-print(perfect_square(number))
+except ValueError:
+
+     print("You did not enter input that can be converted to an integer")
+     exit()
