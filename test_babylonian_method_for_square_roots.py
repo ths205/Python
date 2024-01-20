@@ -1,4 +1,5 @@
 #This program tests that the babylonian_method_for_square_roots.py program for calculating square roots works correctly
+# Use  pytest -s test_babylonian_method_for_square_roots_pytest.py to run the tests
 import unittest
 
 import babylonian_method_for_square_roots
