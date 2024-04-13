@@ -8,7 +8,7 @@ def alex_integer(a,p,q,r):
     if a==0 or p==0 or q==0 or r==0:
        raise ZeroDivisionError('You gave a zero integer. Please give a non-zero integer.')
 
-    if a == p*q*r and round( float(1/a), 14)== round(float( 1/p +1/q +1/r), 14) :
+    if a == p*q*r and round( float(1/a), 14)== round(float( 1/p -1/q -1/r), 14) :
 
        return str(a) + " is an Alexandrian Integer"
     #print(float( 1/p +1/q +1/r)  )
@@ -18,6 +18,6 @@ def alex_integer(a,p,q,r):
 
 
 print(alex_integer(6,3,2,1))
-print(alex_integer(6,-3,-2,1))
-print(alex_integer(630,5,-7,-18))
+#print(alex_integer(6,-3,-2,1))
+print(alex_integer(630,5,7,18))
 #print(alex_integer(6,-3,-2,0))
